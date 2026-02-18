@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedem Apartments | Exquisite Living</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+        <a href="#" class="logo">APARTMENTS BEDEM</a>
+        
+        <nav class="menu">
+            <a href="#hero">Home</a>
+            <a href="#listings">Collection</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="hero-sub">ESTABLISHED IN HART OF MONTENEGRO </p>
+                <h1>Modern Apartments in the Heart of
+ <br><em>Niksic.</em></h1>
+                <div class="hero-actions">
+                    <a class="btn-gold" href="#listings">Book Your Stay Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="listings" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span>OUR OFFERINGS</span>
+                    <h2>Selected Residences</h2>
+                </div>
+                
+                <div class="lux-grid">
+                    <div class="lux-card" onclick="openApt('bedem1')">
+                        <div class="lux-img-wrapper">
+                            <img src="assets/bedem_1.jpg" alt="Bedem 1">
+                        </div>
+                        <div class="lux-info">
+                            <h3>Bedem I</h3>
+                            <p>Urban Sophistication • Split</p>
+                        </div>
+                    </div>
+
+                    <div class="lux-card" onclick="openApt('bedem2')">
+                        <div class="lux-img-wrapper">
+                            <img src="assets/bedem_2.jpg" alt="Bedem 2">
+                        </div>
+                        <div class="lux-info">
+                            <h3>Bedem II</h3>
+                            <p>Historical Grandeur • Old Town</p>
+                        </div>
+                    </div>
+
+                    <div class="lux-card" onclick="openApt('bedem3')">
+                        <div class="lux-img-wrapper">
+                            <img src="assets/bedem_3.jpg" alt="Bedem 3">
+                        </div>
+                        <div class="lux-info">
+                            <h3>Bedem III</h3>
+                            <p>Modern Minimalist • City</p>
+                        </div>
+                    </div>
+
+                    <div class="lux-card" onclick="openApt('nature')">
+                        <div class="lux-img-wrapper">
+                            <img src="assets/bedem_nature.jpg" alt="Bedem Nature">
+                        </div>
+                        <div class="lux-info">
+                            <h3>Bedem Nature</h3>
+                            <p>Wilderness Retreat • Forest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Begin Your Journey</h2>
+                    <p>Contact our concierge for availability and bespoke requests.</p>
+                    <div class="contact-links">
+                        <a href="https://wa.me/385916160031">WhatsApp Concierge</a>
+                        <a href="mailto:info@bedemapartments.com">Email Reservations</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="aptModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeApt()">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> BEDEM APARTMENTS — ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartment Details | Bedem Apartments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <a class="logo" href="index.html">Bedem Apartments</a>
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <a href="index.html" class="back-link">← Back to all apartments</a>
+
+        <div class="detail-grid">
+            <div id="apt-image-container" class="detail-image">
+                <div class="loader">Loading Image...</div>
+            </div>
+
+            <div class="detail-content">
+                <h1 id="apt-title">Loading...</h1>
+                <p class="price-large" id="apt-price">...</p>
+                <p class="muted" id="apt-desc">Loading description...</p>
+                
+                <h3>Amenities</h3>
+                <ul id="apt-features" class="features-list"></ul>
+
+                <div class="action-box">
+                    <p>Ready to stay with us?</p>
+                    <a id="book-btn" class="btn btn-full" href="#">Request Booking via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="muted">© <span id="year"></span> Bedem Apartments</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

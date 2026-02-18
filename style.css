@@ -1,0 +1,224 @@
+/* BEDEM APARTMENTS - PREMIUM SHORTLET STYLE
+   Colors: Midnight Navy, Vibrant Orange, Gallery White
+*/
+
+:root {
+  --primary-orange: #e67e22;    /* From your screenshot */
+  --primary-hover: #d35400;
+  --midnight: #0f172a;         /* Hero background */
+  --slate-dark: #1e293b;       /* Feature boxes */
+  --white: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #64748b;
+  --border-light: #f1f1f1;
+  
+  /* Fonts */
+  --serif: 'Playfair Display', serif;
+  --sans: 'Montserrat', sans-serif;
+}
+
+/* --- BASE STYLES --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { scroll-behavior: smooth; }
+
+body { 
+    background-color: var(--white); 
+    color: var(--text-main); 
+    font-family: var(--sans); 
+    line-height: 1.6; 
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+
+.container { width: min(1200px, 92%); margin: 0 auto; }
+
+/* --- HEADER (SCREENSHOT STYLE) --- */
+.header {
+    background-color: var(--white);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area { display: flex; flex-direction: column; }
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: -2px;
+}
+
+.menu { display: flex; gap: 25px; }
+
+.menu a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.menu a:hover { color: var(--primary-orange); }
+
+.btn-call {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-call:hover { background-color: var(--primary-hover); }
+
+/* --- HERO SECTION (NAVY BACKGROUND) --- */
+.hero { 
+    background-color: var(--midnight); 
+    padding: 140px 0 100px 0; 
+    color: var(--white);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-text h1 span { color: var(--primary-orange); }
+
+.hero-text p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+/* Feature Badges in Hero */
+.hero-features {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.feature-badge {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.feature-badge i { color: var(--primary-orange); font-size: 1.2rem; }
+
+/* Hero Buttons */
+.hero-actions { display: flex; gap: 20px; }
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 18px 35px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 18px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero-img-container img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* --- LISTINGS GRID --- */
+.section { padding: 100px 0; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 { font-family: var(--serif); font-size: 2.5rem; }
+
+.lux-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+}
+
+.lux-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-light);
+}
+
+.lux-card img { width: 100%; height: 220px; object-fit: cover; }
+
+.lux-info { padding: 25px; }
+
+.lux-info h3 { font-size: 1.3rem; margin-bottom: 10px; }
+
+.price-tag { color: var(--primary-orange); font-weight: 800; font-size: 1.1rem; }
+
+/* --- MODAL --- */
+.modal { 
+    display: none; position: fixed; z-index: 2000; left: 0; top: 0; 
+    width: 100%; height: 100%; background: white; overflow-y: auto;
+}
+
+.modal-content { width: min(1000px, 92%); margin: 80px auto; }
+
+.close-modal { 
+    position: fixed; top: 20px; right: 30px; font-size: 3rem; 
+    cursor: pointer; color: var(--text-main); 
+}
+
+/* --- FOOTER --- */
+.footer { padding: 60px 0; text-align: center; border-top: 1px solid var(--border-light); }
+
+/* --- MOBILE --- */
+@media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-img-container { order: -1; }
+    .menu { display: none; } /* Consider adding a mobile menu later */
+}
